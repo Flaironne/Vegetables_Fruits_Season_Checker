@@ -6,6 +6,17 @@ import { registerSW } from "virtual:pwa-register";
 
 registerSW({ immediate: true });
 
+// const updateSW = registerSW({
+//   onNeedRefresh() {
+//     if (confirm("Nouvelle version disponible. Recharger ?")) {
+//       updateSW?.();
+//     }
+//   },
+//   onOfflineReady() {
+//     console.log("App prête à fonctionner offline !");
+//   },
+// });
+
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <App />

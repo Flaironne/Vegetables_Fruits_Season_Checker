@@ -1,57 +1,296 @@
 import type { Month } from "./month";
 
-// Type pour chaque produit
+export type Category = "Fruit" | "Légume";
+
 export type Product = {
   id: string;
   name: string;
-  category: "Fruit" | "Légume";
-  seasons: Month[]; // mois où le produit est de saison
-  image?: string; // URL ou chemin relatif pour illustration
+  category: Category;
+  seasons: Month[];
+  emoji: string;
 };
 
-// Exemple de “base de données” en dur
 export const products: Product[] = [
+  // ── Fruits ──────────────────────────────────────────────────────────────────
   {
     id: "pomme",
     name: "Pomme",
     category: "Fruit",
-    seasons: ["Janvier", "Février", "Mars", "Octobre", "Novembre", "Décembre"],
+    emoji: "🍎",
+    seasons: ["Septembre", "Octobre", "Novembre", "Décembre", "Janvier", "Février", "Mars"],
   },
   {
     id: "poire",
     name: "Poire",
     category: "Fruit",
+    emoji: "🍐",
     seasons: ["Août", "Septembre", "Octobre", "Novembre"],
   },
   {
     id: "fraise",
     name: "Fraise",
     category: "Fruit",
+    emoji: "🍓",
     seasons: ["Avril", "Mai", "Juin", "Juillet"],
   },
+  {
+    id: "framboise",
+    name: "Framboise",
+    category: "Fruit",
+    emoji: "🫐",
+    seasons: ["Juin", "Juillet", "Août", "Septembre"],
+  },
+  {
+    id: "cerise",
+    name: "Cerise",
+    category: "Fruit",
+    emoji: "🍒",
+    seasons: ["Mai", "Juin", "Juillet"],
+  },
+  {
+    id: "peche",
+    name: "Pêche",
+    category: "Fruit",
+    emoji: "🍑",
+    seasons: ["Juin", "Juillet", "Août", "Septembre"],
+  },
+  {
+    id: "abricot",
+    name: "Abricot",
+    category: "Fruit",
+    emoji: "🍊",
+    seasons: ["Juin", "Juillet", "Août"],
+  },
+  {
+    id: "prune",
+    name: "Prune",
+    category: "Fruit",
+    emoji: "🟣",
+    seasons: ["Juillet", "Août", "Septembre", "Octobre"],
+  },
+  {
+    id: "raisin",
+    name: "Raisin",
+    category: "Fruit",
+    emoji: "🍇",
+    seasons: ["Août", "Septembre", "Octobre"],
+  },
+  {
+    id: "melon",
+    name: "Melon",
+    category: "Fruit",
+    emoji: "🍈",
+    seasons: ["Juin", "Juillet", "Août", "Septembre"],
+  },
+  {
+    id: "pasteque",
+    name: "Pastèque",
+    category: "Fruit",
+    emoji: "🍉",
+    seasons: ["Juillet", "Août", "Septembre"],
+  },
+  {
+    id: "figue",
+    name: "Figue",
+    category: "Fruit",
+    emoji: "🫐",
+    seasons: ["Août", "Septembre", "Octobre"],
+  },
+  {
+    id: "myrtille",
+    name: "Myrtille",
+    category: "Fruit",
+    emoji: "🫐",
+    seasons: ["Juillet", "Août", "Septembre"],
+  },
+  {
+    id: "groseille",
+    name: "Groseille",
+    category: "Fruit",
+    emoji: "🍒",
+    seasons: ["Juin", "Juillet", "Août"],
+  },
+  {
+    id: "noisette",
+    name: "Noisette",
+    category: "Fruit",
+    emoji: "🌰",
+    seasons: ["Septembre", "Octobre"],
+  },
+  {
+    id: "noix",
+    name: "Noix",
+    category: "Fruit",
+    emoji: "🌰",
+    seasons: ["Octobre", "Novembre", "Décembre"],
+  },
+  {
+    id: "kiwi",
+    name: "Kiwi",
+    category: "Fruit",
+    emoji: "🥝",
+    seasons: ["Novembre", "Décembre", "Janvier", "Février", "Mars", "Avril"],
+  },
+  {
+    id: "orange",
+    name: "Orange",
+    category: "Fruit",
+    emoji: "🍊",
+    seasons: ["Décembre", "Janvier", "Février", "Mars", "Avril"],
+  },
+
+  // ── Légumes ─────────────────────────────────────────────────────────────────
   {
     id: "carotte",
     name: "Carotte",
     category: "Légume",
+    emoji: "🥕",
     seasons: [
-      "Janvier",
-      "Février",
-      "Mars",
-      "Avril",
-      "Mai",
-      "Juin",
-      "Juillet",
-      "Août",
-      "Septembre",
-      "Octobre",
-      "Novembre",
-      "Décembre",
+      "Janvier", "Février", "Mars", "Avril", "Mai", "Juin",
+      "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre",
+    ],
+  },
+  {
+    id: "pomme-de-terre",
+    name: "Pomme de terre",
+    category: "Légume",
+    emoji: "🥔",
+    seasons: [
+      "Janvier", "Février", "Mars", "Avril", "Mai", "Juin",
+      "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre",
     ],
   },
   {
     id: "courgette",
     name: "Courgette",
     category: "Légume",
+    emoji: "🥒",
     seasons: ["Juin", "Juillet", "Août", "Septembre"],
+  },
+  {
+    id: "tomate",
+    name: "Tomate",
+    category: "Légume",
+    emoji: "🍅",
+    seasons: ["Juillet", "Août", "Septembre", "Octobre"],
+  },
+  {
+    id: "haricot-vert",
+    name: "Haricot vert",
+    category: "Légume",
+    emoji: "🫘",
+    seasons: ["Juin", "Juillet", "Août", "Septembre"],
+  },
+  {
+    id: "poivron",
+    name: "Poivron",
+    category: "Légume",
+    emoji: "🫑",
+    seasons: ["Juillet", "Août", "Septembre", "Octobre"],
+  },
+  {
+    id: "aubergine",
+    name: "Aubergine",
+    category: "Légume",
+    emoji: "🍆",
+    seasons: ["Juillet", "Août", "Septembre", "Octobre"],
+  },
+  {
+    id: "concombre",
+    name: "Concombre",
+    category: "Légume",
+    emoji: "🥒",
+    seasons: ["Juin", "Juillet", "Août", "Septembre"],
+  },
+  {
+    id: "salade",
+    name: "Laitue",
+    category: "Légume",
+    emoji: "🥬",
+    seasons: ["Avril", "Mai", "Juin", "Juillet", "Août", "Septembre"],
+  },
+  {
+    id: "epinard",
+    name: "Épinard",
+    category: "Légume",
+    emoji: "🥬",
+    seasons: ["Mars", "Avril", "Mai", "Septembre", "Octobre", "Novembre"],
+  },
+  {
+    id: "brocoli",
+    name: "Brocoli",
+    category: "Légume",
+    emoji: "🥦",
+    seasons: ["Septembre", "Octobre", "Novembre", "Décembre", "Janvier", "Février", "Mars"],
+  },
+  {
+    id: "chou-fleur",
+    name: "Chou-fleur",
+    category: "Légume",
+    emoji: "🥦",
+    seasons: ["Septembre", "Octobre", "Novembre", "Décembre", "Janvier", "Février"],
+  },
+  {
+    id: "poireau",
+    name: "Poireau",
+    category: "Légume",
+    emoji: "🧅",
+    seasons: ["Octobre", "Novembre", "Décembre", "Janvier", "Février", "Mars"],
+  },
+  {
+    id: "oignon",
+    name: "Oignon",
+    category: "Légume",
+    emoji: "🧅",
+    seasons: ["Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre"],
+  },
+  {
+    id: "ail",
+    name: "Ail",
+    category: "Légume",
+    emoji: "🧄",
+    seasons: ["Juin", "Juillet", "Août", "Septembre"],
+  },
+  {
+    id: "champignon",
+    name: "Champignon",
+    category: "Légume",
+    emoji: "🍄",
+    seasons: ["Septembre", "Octobre", "Novembre"],
+  },
+  {
+    id: "potiron",
+    name: "Potiron",
+    category: "Légume",
+    emoji: "🎃",
+    seasons: ["Septembre", "Octobre", "Novembre", "Décembre"],
+  },
+  {
+    id: "betterave",
+    name: "Betterave",
+    category: "Légume",
+    emoji: "🔴",
+    seasons: ["Septembre", "Octobre", "Novembre", "Décembre", "Janvier", "Février"],
+  },
+  {
+    id: "radis",
+    name: "Radis",
+    category: "Légume",
+    emoji: "🌸",
+    seasons: ["Mars", "Avril", "Mai", "Juin"],
+  },
+  {
+    id: "asperge",
+    name: "Asperge",
+    category: "Légume",
+    emoji: "🌿",
+    seasons: ["Avril", "Mai", "Juin"],
+  },
+  {
+    id: "petits-pois",
+    name: "Petits pois",
+    category: "Légume",
+    emoji: "🫛",
+    seasons: ["Avril", "Mai", "Juin", "Juillet"],
   },
 ];
