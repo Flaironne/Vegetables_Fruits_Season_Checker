@@ -2,7 +2,10 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { VitePWA } from "vite-plugin-pwa";
 
+const base = "/Vegetables_Fruits_Season_Checker/";
+
 export default defineConfig({
+  base,
   plugins: [
     react(),
     VitePWA({
@@ -13,7 +16,8 @@ export default defineConfig({
         short_name: "FruitsSaison",
         description:
           "Consulte les fruits et légumes de saison, même hors ligne",
-        start_url: "/",
+        start_url: "/Vegetables_Fruits_Season_Checker/",
+        scope: "/Vegetables_Fruits_Season_Checker/",
         display: "standalone",
         background_color: "#ffffff",
         theme_color: "#4caf50",
