@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1b4332"/>
+      <stop offset="100%" style="stop-color:#52b788"/>
+    </linearGradient>
+    <linearGradient id="leaf-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#d8f3dc;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background rounded square -->
+  <rect width="512" height="512" rx="112" ry="112" fill="url(#bg)"/>
+
+  <!-- Main leaf -->
+  <path d="M256 96 C256 96 160 140 148 240 C136 340 200 390 256 416 C312 390 376 340 364 240 C352 140 256 96 256 96 Z"
+        fill="url(#leaf-grad)" opacity="0.95"/>
+
+  <!-- Leaf center vein -->
+  <line x1="256" y1="112" x2="256" y2="400" stroke="#52b788" stroke-width="6" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- Left veins -->
+  <path d="M256 200 Q220 220 200 245" stroke="#52b788" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.5"/>
+  <path d="M256 270 Q212 290 192 315" stroke="#52b788" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.5"/>
+  <path d="M256 155 Q228 165 215 182" stroke="#52b788" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.4"/>
+
+  <!-- Right veins -->
+  <path d="M256 200 Q292 220 312 245" stroke="#52b788" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.5"/>
+  <path d="M256 270 Q300 290 320 315" stroke="#52b788" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.5"/>
+  <path d="M256 155 Q284 165 297 182" stroke="#52b788" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.4"/>
+
+  <!-- Small apple on the right -->
+  <circle cx="340" cy="148" r="38" fill="#ff9a56" opacity="0.92"/>
+  <circle cx="340" cy="148" r="38" fill="none" stroke="#fff" stroke-width="3" opacity="0.3"/>
+  <!-- Apple stem -->
+  <path d="M340 112 Q348 102 355 96" stroke="#1b4332" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <!-- Apple highlight -->
+  <circle cx="328" cy="138" r="8" fill="white" opacity="0.3"/>
+</svg>
